@@ -1,2 +1,2 @@
-# Projekt-1-CAJ-
-Projekt 1 von Christopher Annika und Jan
+# Projekt-1 "MyMedia"
+von Christopher Annika und Jan
