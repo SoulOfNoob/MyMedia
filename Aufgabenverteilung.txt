@@ -1,0 +1,5 @@
+Aufgabenverteilung:
+Name				UserName		Aufgabe
+Annika Bode			SunnySunny93	HTML
+Christopher Giese	Honnullul		MySQL
+Jan Ryklikas		SoulOfNoob		PHP
