@@ -15,7 +15,7 @@ create table User(
 	name char(100),
 	passwort char(100),
 	email char(100),
-	geburtstag date,
+	geburtstag int,
 	primary key (ID)
 )
 engine=INNODB;
