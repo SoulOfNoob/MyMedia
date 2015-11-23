@@ -1,0 +1,64 @@
+drop database if exists mymedia;
+create database mymedia;
+use mymedia;
+
+create table medientypen{
+	ID int AUTO_INCREMENT,
+	Bezeichnung char(30),
+	primary key (Bezeichnung)
+};
+create table user{
+	ID int AUTO_INCREMENT,
+	Name char(100),
+	Passwort char(100),
+	Email char(100),
+	Geburtstag date
+};
+create table kontakte{
+	User1 int,
+	User2 int,
+	primary key (User1, User2),
+	constraint foreign key(user1)
+	references user(ID)
+	on update restrict
+	on delete cascade,
+	constraint foreign key(user2)
+	references user(ID)
+	on update restrict
+	on delete cascade
+}
+engine=INNODB;
+create table medien{
+	ID int AUTO_INCREMENT,
+	Typ char(30),
+	Name char(30),
+	Beschreibung char(500),
+	Bild varchar(100),
+	Video varchar(100),
+	primary key(ID),
+	constraint foreign key(Typ)
+	references medientypen(Bezeichnung)
+	on update restrict
+	on delete cascade
+}
+engine=INNODB;
+create table usermedien{
+	ID int AUTO_INCREMENT,
+	Medium int,
+	Besitzer int,
+	Ausleiher int,
+	primary key(ID),
+	constraint foreign key(Medium)
+	references medien(ID)
+	on update restrict
+	on delete cascade,
+	constraint foreign key(Besitzer)
+	references user(ID)
+	on update restrict
+	on delete cascade,
+	constraint foreign key(Ausleiher)
+	references user(ID)
+	on update restrict
+	on delete cascade
+}
+engine=INNODB;
