@@ -50,3 +50,15 @@
 		</footer>
 	</body>
 </html>
+
+<!--
+=== Feedback Alpers, Dez 3 ===
+
+Bitte integrieren Sie PHP-Teile direkt in die HTML-Dokumente. Die Speicherung der Datei
+index.html unter dem Namen index.php macht so nicht recht Sinn, denn dann ist beispielsweise
+nicht klar, welche der beiden die Einstiegsseite in die Anwendung ist.
+
+Und wie schon in functions.php geschrieben: Wichtig ist vor allem, dass Sie umgehend beginnen die 
+Funktionalitäten der HTML-Container zu realisieren. Denn das ist die Hauptaufgabe des PHP'lers im Team.
+
+=== Feedback Alpers, Ende ===
